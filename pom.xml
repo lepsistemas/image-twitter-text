@@ -22,6 +22,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
+		<os.classifier>macosx-x86_64</os.classifier>
 	</properties>
 
 	<dependencies>
@@ -39,13 +40,19 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-
+		
+		<dependency>
+			<groupId>org.bytedeco</groupId>
+			<artifactId>javacv</artifactId>
+			<version>1.4</version>
+		</dependency>
+		
 		<dependency>
 			<groupId>org.bytedeco</groupId>
 			<artifactId>javacv-platform</artifactId>
 			<version>1.4</version>
 		</dependency>
-
+		
 		<dependency>
 			<groupId>org.bytedeco.javacpp-presets</groupId>
 			<artifactId>tesseract</artifactId>
@@ -54,8 +61,16 @@
 
 		<dependency>
 			<groupId>org.bytedeco.javacpp-presets</groupId>
+			<artifactId>tesseract</artifactId>
+			<version>3.05.01-1.4</version>
+			<classifier>${os.classifier}</classifier>
+		</dependency>
+
+		<dependency>
+			<groupId>org.bytedeco.javacpp-presets</groupId>
 			<artifactId>leptonica</artifactId>
 			<version>1.74.4-1.4</version>
+			<classifier>${os.classifier}</classifier>
 		</dependency>
 	</dependencies>
 
